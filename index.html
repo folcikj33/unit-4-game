@@ -6,11 +6,7 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<link rel="stylesheets" type="text/css" href="assets/css/style.css" />
 		<link rel="stylesheets" type="text/css" href="assets/css/reset.css" />
-		<script
-			rel="stylesheets"
-			type="text/javascript"
-			src="assets/javascript/game.js"
-		></script>
+
 		<title>Document</title>
 	</head>
 	<body>
@@ -20,42 +16,42 @@
 			This is Crystal Collector. Match the number using the crystals!
 		</div>
 		<br />
-		<div id="match_box">
-			Match:
-			<div id="match_score"></div>
+		<div id="matchBox">
+			<div id="matchScore"></div>
 		</div>
 
-		<div id="wl_box">
-			<div id="wins_counter">
-				Wins: 0
-			</div>
-			<br />
-			<div id="losses_counter">
-				Losses: 0
-			</div>
-		</div>
-
-		<button class="btn" id="btn1">
+		<button class="btn" id="btn1" value="">
 			<img src="assets/images/crystal_1.png" />
 		</button>
-		<button class="btn" id="btn2">
+		<button class="btn" id="btn2" value="">
 			<img src="assets/images/crystal_2.png" />
 		</button>
-		<button class="btn" id="btn2">
+		<button class="btn" id="btn3" value="">
 			<img src="assets/images/crystal_3.png" />
 		</button>
-		<button class="btn" id="btn4">
+		<button class="btn" id="btn4" value="">
 			<img src="assets/images/crystal_4.png" />
 		</button>
 
 		<div id="total_box">
-			Total Score:
-			<div id="user_total"></div>
+			<div id="userTotal"></div>
 		</div>
 		<div id="counter_box">
-			<div id="user_Counter"></div>
-		</div>
+			<div id="userCounter" value=""></div>
+        </div>
+        
+        <div id="wlBox">
+            <div id="winsCounter">
+            </div>
+            <br />
+            <div id="lossesCounter">
+            </div>
+        </div>
 
+		<script
+			type="text/javascript"
+			src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+		></script>
 		<script type="text/javascript" src="assets/javascript/game.js">
 			console.log("in html!")
 		</script>
