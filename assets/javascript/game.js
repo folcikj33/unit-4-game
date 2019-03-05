@@ -12,11 +12,8 @@ var winsCounter = 0;
 var lossesCounter = 0;
 var userCounter = 0;
 var userTotal = 0;
-var penaltyValue = 0 +
-	Number(crystalOne) +
-	Number(crystalTwo) +
-	Number(crystalThree) +
-	Number(crystalFour);
+
+    
 
 //set up functions for win and lose
 var lose = function lose() {
@@ -31,10 +28,6 @@ var win = function win() {
 };
 var tallyWin = function tallyWin(){
     userTotal = Number(userTotal) + Number(generateMatchScore);
-    $("#userTotal").text("Total Score: " + userTotal);
-};
-var tallyLose = function tallyLose(){
-    userTotal = Number(userTotal) - Number(penaltyValue);
     $("#userTotal").text("Total Score: " + userTotal);
 };
 
@@ -61,6 +54,7 @@ var newRound = function newRound() {
 };
 
 //start game after linking variables to html
+//assign variables to divs
 $("#userTotal").text("Total Score: " + userTotal);
 $("#winsCounter").text("Wins: " + winsCounter);
 $("#winsCounter").attr("value", winsCounter);
@@ -69,17 +63,23 @@ $("#lossesCounter").attr("value", lossesCounter);
 $("#userCounter").attr("value", userCounter);
 newRound();
 
-//add value to user counter on click
+//add each crystal's value to user counter on click
 $(".btn").click(function() {
     userCounter = Number(userCounter) + Number($(this).val());
     $("#userCounter").text("User Counter: " + userCounter);
 
+//if user wins, add user counter amount to user total
+//add 1 to wins counter
+//initiate new round
 if (Number(userCounter) > matchScore) {
     lose();
     tallyLose();
     newRound();
 } 
 
+// if user counter > matchScore
+//add 1 to losses counter
+//initiate new round
 if (Number(userCounter) == matchScore){
     win();
     tallyWin();
@@ -89,14 +89,5 @@ if (Number(userCounter) == matchScore){
 
     });
 
-//do these for each crystal
-//assign variable to div
-//have each click of crystal add its value to user counter
-//if user counter = matchScore
-//add user counter amount to user total
-//add 1 to wins counter
-//initiate new round
-//else, if user counter > matchScore
-//add 1 to losses counter
-//initiate new round
-//else, wait for user to click
+
+
