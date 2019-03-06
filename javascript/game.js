@@ -1,32 +1,23 @@
 // function initialize() {
-// 	//code.jquery.com/jquery-3.3.1.min.js
-// }
-// // $(initialize);
-console.log("I'm here! sdfsd");
-var generateMatchScore = [Math.floor(Math.random() * 102 + 19)];
-var generateCrystalScore = [];
-var matchScore;
-var winsCounter = 0;
-var lossesCounter = 0;
-var userCounter = 0;
-var userTotal = 0;
-var newRound = function() {};
 
-console.log(generateMatchScore);
+(".btn").crystalOne ={
+    name: "Grizwald GlassStone",
+    clicksPerRound: 3,
+    hitNumbers: [33, 34, 40, 37, 32, 33, 37, 38, 40, 42, 11, 10, 11, 12, 1, 1 , 2, 3, 1],
+};
+crystalTwo ={
+    name: "Ollie the Opal",
+    clicksPerRound: 6,
+    hitNumbers: [2, 4, 6, 8, 4, 6, 8, 4, 6, 4, 3, 1, 1, 7, 10, 12, 60, 100],
+};
+crystalThree ={
+    name: "Saphire Sage",
+    clicksPerRound: 10
+    hitNumbers: [20, 24,23, 17,16,15,16,13,13,12,13,10,11,10,7,7,8,8,7,9,3,29],
 
-//display userCounter
-//display userTotal
-//have 'new round' do the following:
-//have computer select random number from 19-120
-//have computer display it as matchScore
-//set userCounter to 0
-//have each crystal generate number 1-12 (do not display)
-//have each click of crystal add its value to user counter
-//if user counter = matchScore
-//add user counter amount to user total
-//add 1 to wins counter
-//initiate new round
-//else, if user counter > matchScore
-//add 1 to losses counter
-//initiate new round
-//else, wait for user to click
+};
+crystalFour ={
+    name: "Ambernathy Blonde-smoke",
+    clicksPerRound: 20,
+    hitNumbers: [compCounter/2, compCounter+3, compCounter +7, etc.],
+};

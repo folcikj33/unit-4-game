@@ -4,50 +4,61 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<link rel="stylesheets" type="text/css" href="assets/css/style.css" />
-		<link rel="stylesheets" type="text/css" href="assets/css/reset.css" />
-
-		<title>Document</title>
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+		<link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
+		<title>Crystal Collector!</title>
 	</head>
 	<body>
-		<header><h1>Crystal Collector!</h1></header>
-		<br />
-		<div id="description of rules">
-			This is Crystal Collector. Match the number using the crystals!
+		<style></style>
+		<header id="header">Crystal Collector!</header> 
+		<img id="wallpaper" src="assets/images/googleWallpaperCave.jpg"/>
+		<br>
+		<div class="divy" id="hisButt">
+			<p id="p1">
+			Click
+			<br>
+			Oh, yes...
+			</p>
+			<p id="p2">
+			My crystals are beautiful, as well. Don't you find? Click 
+			them now to harness their invaluable powers. 
+			And I'll tell ya what -- if you manage to make a match, 
+			the crystal score will be all yours! That's right. 
+			A finder and seeker, soon a 
+			keeper and reaper! My oath to you!</p>
+			<p id="p3">
+			But be warned... These crystals sometimes have a
+			mind of their own... and you may find yourself 
+			seeker who read'm-and-weeps!</p>
+		 </p>
+		
 		</div>
-		<br />
-		<div id="matchBox">
-			<div id="matchScore"></div>
+		<br>
+		<div class="divy" id="matchBox">
+			<div class="divy" id="matchScore"></div>
 		</div>
 
-		<button class="btn" id="btn1" value="">
-			<img src="assets/images/crystal_1.png" />
-		</button>
-		<button class="btn" id="btn2" value="">
-			<img src="assets/images/crystal_2.png" />
-		</button>
-		<button class="btn" id="btn3" value="">
-			<img src="assets/images/crystal_3.png" />
-		</button>
-		<button class="btn" id="btn4" value="">
-			<img src="assets/images/crystal_4.png" />
-		</button>
+		<input class="btn" id="btn1" value="" type="image" src=assets/images/crystal_1.png>
+		<input class="btn" id="btn2" value="" type="image" src="assets/images/crystal_2.png">
+		<input class="btn" id="btn3" value="" type="image" src="assets/images/crystal_3.png">
+		<input class="btn" id="btn4" value="" type="image" src="assets/images/crystal_4.png">
+			
+		
 
-		<div id="total_box">
-			<div id="userTotal"></div>
+		<div class="divy" id="total_box">
+			<div class="div" id="userTotal"></div>
 		</div>
-		<div id="counter_box">
-			<div id="userCounter" value=""></div>
+		<div class="divy" id="counter_box">
+			<div class="divy" id="userCounter" value=""></div>
         </div>
         
-        <div id="wlBox">
-            <div id="winsCounter">
-            </div>
-            <br />
-            <div id="lossesCounter">
-            </div>
-        </div>
-
+        <box id="wlBox">
+            <div id="winsCounter"> </div>
+            <box id="lossesCounter"></box>
+        </box><br>
+<audio controls autoplay>
+	<source src="assets/images/crystalized.mp3" type="audio/mp3">
+</audio>
 		<script
 			type="text/javascript"
 			src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"
@@ -55,5 +66,6 @@
 		<script type="text/javascript" src="assets/javascript/game.js">
 			console.log("in html!")
 		</script>
+		</style>
 	</body>
 </html>

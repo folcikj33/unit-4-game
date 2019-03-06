@@ -1,0 +1,134 @@
+#header {
+	font-family: Verdana;
+	font-style: bold;
+	font-size: 80px;
+	background: black;
+	color: white;
+	text-align: center;
+    z-index: 0;
+}
+
+#wallpaper{
+    position: fixed;
+    z-index: -1;
+}
+
+body {
+	background-color: black;
+	top: 0;
+	z-index: 5;
+	/* position: center; */
+	margin: 20px;
+}
+
+
+#hisButt {
+	float: left;
+	font-size: 1.6em;
+	height: 600px;
+	width: 600px;
+	background-color: green;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	flex: 1;
+}
+
+#p1 {
+	margin: 3px;
+	background-color: gray;
+	font-style: bold;
+	border: 4px solid orange;
+}
+
+#p2 {
+	margin: 3px;
+	background-color: gray;
+	font-style: bold;
+	border: 4px solid orange;
+}
+
+#p3 {
+	background-color: gray;
+	font-style: bold;
+	border: 4px solid orange;
+	margin: 5px;
+}
+
+#matchBox {
+	text: white;
+	font-style: bold;
+	background: green;
+	display: block;
+}
+
+#matchScore {
+	font: white;
+	font-style: bold;
+	background: green;
+	display: block;
+}
+
+.btn {
+    position:flex;
+    width: 800px;
+    height: 800px;
+    flex: row;
+    float: none;
+    display: inline-block;
+}
+
+
+
+#btn1{
+    display: inline-block;
+    z-index: 1;
+}
+
+#total_box {
+	color: white;
+	font-style: bold;
+	background: green;
+	display: block;
+}
+
+#counter_box {
+	text: white;
+	font-style: bold;
+	background: green;
+}
+
+#usercounter {
+	text: white;
+	font-style: bold;
+	background: green;
+}
+
+#wlBoxes {
+	background-color: yellow;
+	width: 200px;
+	height: 200px;
+	font: 20px;
+}
+
+#winsCounter {
+	background-color: gray;
+}
+
+#lossesCounter {
+	background: green;
+}
+.divy {
+	font-family: "Trebuchet MS";
+}
+
+#wlBox {
+	font-family: "Trebuchet MS";
+	font-size: 1em;
+}
+audio {
+	background-color: blue;
+    bottom: 0;
+    visibility: hidden;
+    
+}

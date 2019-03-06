@@ -13,22 +13,20 @@ var lossesCounter = 0;
 var userCounter = 0;
 var userTotal = 0;
 
-    
-
 //set up functions for win and lose
 var lose = function lose() {
 	lossesCounter = Number(lossesCounter) + 1;
 	$("#lossesCounter").text("Losses: " + lossesCounter);
-    $("#lossesCounter").attr("value", lossesCounter);
+	$("#lossesCounter").attr("value", lossesCounter);
 };
 var win = function win() {
-    winsCounter = Number(winsCounter) + 1;
-    $("#winsCounter").attr("value", winsCounter);
-    $("#winsCounter").text("Wins: " + winsCounter);
+	winsCounter = Number(winsCounter) + 1;
+	$("#winsCounter").attr("value", winsCounter);
+	$("#winsCounter").text("Wins: " + winsCounter);
 };
-var tallyWin = function tallyWin(){
-    userTotal = Number(userTotal) + Number(generateMatchScore);
-    $("#userTotal").text("Total Score: " + userTotal);
+var tallyWin = function tallyWin() {
+	userTotal = Number(userTotal) + Number(generateMatchScore);
+	$("#userTotal").text("Total Score: " + userTotal);
 };
 
 //have 'new round' do the following:
@@ -38,7 +36,7 @@ var tallyWin = function tallyWin(){
 //have each crystal generate number 1-12 (do not display)
 var newRound = function newRound() {
 	var generateMatchScore = [Math.floor(Math.random() * 102 + 19)];
-    matchScore = Number(generateMatchScore);
+	matchScore = Number(generateMatchScore);
 	$("#matchScore").attr("value", generateMatchScore);
 	$("#matchScore").text("Number to Match: " + generateMatchScore);
 	userCounter = 0;
@@ -65,29 +63,26 @@ newRound();
 
 //add each crystal's value to user counter on click
 $(".btn").click(function() {
-    userCounter = Number(userCounter) + Number($(this).val());
-    $("#userCounter").text("User Counter: " + userCounter);
+	userCounter = Number(userCounter) + Number($(this).val());
+	$("#userCounter").text("User Counter: " + userCounter);
 
-//if user wins, add user counter amount to user total
-//add 1 to wins counter
-//initiate new round
-if (Number(userCounter) > matchScore) {
-    lose();
-    tallyLose();
-    newRound();
-} 
+	//if user wins, add user counter amount to user total
+	//add 1 to wins counter
+	//initiate new round
+	if (Number(userCounter) > matchScore) {
+		lose();
+		tallyLose();
+		newRound();
+	}
 
-// if user counter > matchScore
-//add 1 to losses counter
-//initiate new round
-if (Number(userCounter) == matchScore){
-    win();
-    tallyWin();
-    newRound();
-}
+	// if user counter > matchScore
+	//add 1 to losses counter
+	//initiate new round
+	if (Number(userCounter) == matchScore) {
+		win();
+		tallyWin();
+		newRound();
+	}
+});
 
-
-    });
-
-
-
+//
