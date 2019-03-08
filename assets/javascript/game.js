@@ -2,20 +2,27 @@
 console.log("I'm here! still!");
 
 //define variables
-var generateMatchScore = [Math.floor(Math.random() * 102 + 19)];
+var generateMatchScore = Math.floor(Math.random() * 102 + 19);
 var matchScore = Number(generateMatchScore);
-var crystalOne = 0;
-var crystalTwo = 0;
-var crystalThree = 0;
-var crystalFour = 0;
+var crystalOne = [];
+var crystalTwo = [];
+var crystalThree = [];
+var crystalFour = [];
 var winsCounter = 0;
 var lossesCounter = 0;
-var userCounter = 0;
-var userTotal = 0;
+var userCounter = [];
+var userTotal = [];
+$("#winsCounter").attr("value", winsCounter);
+console.log(winsCounter);
+$("#winsCounter").attr("value", winsCounter);
 
-//set up functions for win and lose
+console.log(winsCounter);
+console.log(lossesCounter, "Losses");
+console.log(generateMatchScore, "generate outside");
+
+//define functions for win and lose before game begins
 var lose = function lose() {
-	lossesCounter = Number(lossesCounter) + 1;
+	lossesCounter = parseInt(lossesCounter) + 1;
 	$("#lossesCounter").text("Losses: " + lossesCounter);
 	$("#lossesCounter").attr("value", lossesCounter);
 };
@@ -29,14 +36,18 @@ var tallyWin = function tallyWin() {
 	$("#userTotal").text("Total Score: " + userTotal);
 };
 
+console.log(crystalOne);
+console.log(crystalTwo);
+
 //have 'new round' do the following:
-//have computer select random number from 19-120
+//select random number from 19-120
 //have computer display it as matchScore
 //set userCounter to 0
 //have each crystal generate number 1-12 (do not display)
 var newRound = function newRound() {
-	var generateMatchScore = [Math.floor(Math.random() * 102 + 19)];
+	var generateMatchScore = Math.floor(Math.random() * 102 + 19);
 	matchScore = Number(generateMatchScore);
+	console.log(generateMatchScore, "generate inside");
 	$("#matchScore").attr("value", generateMatchScore);
 	$("#matchScore").text("Number to Match: " + generateMatchScore);
 	userCounter = 0;
@@ -59,7 +70,6 @@ $("#winsCounter").attr("value", winsCounter);
 $("#lossesCounter").text("Losses: " + lossesCounter);
 $("#lossesCounter").attr("value", lossesCounter);
 $("#userCounter").attr("value", userCounter);
-newRound();
 
 //add each crystal's value to user counter on click
 $(".btn").click(function() {
@@ -71,10 +81,8 @@ $(".btn").click(function() {
 	//initiate new round
 	if (Number(userCounter) > matchScore) {
 		lose();
-		tallyLose();
 		newRound();
 	}
-
 	// if user counter > matchScore
 	//add 1 to losses counter
 	//initiate new round
@@ -84,5 +92,4 @@ $(".btn").click(function() {
 		newRound();
 	}
 });
-
-//
+newRound();
