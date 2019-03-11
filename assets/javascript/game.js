@@ -30,6 +30,9 @@ var win = function win() {
 	winsCounter = Number(winsCounter) + 1;
 	$("#winsCounter").attr("value", winsCounter);
 	$("#winsCounter").text("Wins: " + winsCounter);
+	if (winsCounter === 1) {
+		audio.play();
+	}
 };
 var tallyWin = function tallyWin() {
 	userTotal = Number(userTotal) + Number(generateMatchScore);
@@ -49,7 +52,7 @@ var newRound = function newRound() {
 	matchScore = Number(generateMatchScore);
 	console.log(generateMatchScore, "generate inside");
 	$("#matchScore").attr("value", generateMatchScore);
-	$("#matchScore").text("Number to Match: " + generateMatchScore);
+	$("#matchScore").text(generateMatchScore);
 	userCounter = 0;
 	$("#userCounter").text("User Counter: " + userCounter);
 	var crystalOne = [Math.floor(Math.random() * 12) + 1];

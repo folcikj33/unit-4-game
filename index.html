@@ -7,52 +7,50 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
+    <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
     <title>Crystal Collector!</title>
 </head>
 
 <body>
     <style></style>
-    <header id="header">Crystal Collector!</header>
-    <img id="wallpaper" src="assets/images/googleWallpaperCave.jpg" />
-    <br>
-    <div class="divy" id="hisButt">
-        <p id="p1">
-            Click
-            <br>
-            Oclick the crystls
-        </p>
-        <p id="p2">
-            match the values</p>
-        <p id="p3">
-            raise the score</p>
-        </p>
-
-    </div>
-    <br>
-    <div class="divy" id="matchBox">
-        <div class="divy" id="matchScore"></div>
-    </div>
     
-    <input style="block" class="btn" id="btn1" value="" type="image" src= "assets/images/crystal_1.png"> 
+    <img id="wallpaper" src="assets/images/googleWallpaperCave.jpg" />
+    <header id="header">Crystal Collector...
+    <br>
+    <div class="divy" id="matchBox">Match the Number:<br></div>
+        <div class="divy" id="matchScore"></div></header>
+    
+    <!-- <div class="divy" id="hisButt"> -->
+        <!-- See how many crystals you can collect!<br> <br> The values change after every round! <br>Good luck! -->
+    <!-- </div>
+    <br> -->
+    
+    
+    <input class="btn" id="btn1" value="" type="image" src= "assets/images/crystal_1.png"> 
     <input class="btn" id="btn2" value="" type="image" src= "assets/images/crystal_2.png">
+
+
+
     <input class="btn" id="btn3" value="" type="image" src="assets/images/crystal_3.png">
     <input class="btn" id="btn4" value="" type="image" src="assets/images/crystal_4.png">
 
 
-
-    <div class="divy" id="total_box">
-        <div class="div" id="userTotal"></div>
-    </div>
     <div class="divy" id="counter_box">
         <div class="divy" id="userCounter" value=""></div>
     </div>
-
-    <box id="wlBox">
-        <div id="winsCounter"> </div>
+    
+    
+    
+    <div id="wlBox">
+        <box id="winsCounter"> </box>
+        <!-- <p>0</p> -->
         <box id="lossesCounter"></box>
-    </box><br>
+    </div><br>
+    
+
     <audio controls autoplay>
-        <source src="assets/images/crystalized.mp3" type="audio/mp3">
+
+        <source id="audio" src="assets/images/crystalized.mp3" type="audio/mp3">
     </audio>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="assets/javascript/game.js">
